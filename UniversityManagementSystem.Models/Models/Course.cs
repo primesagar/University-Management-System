@@ -17,7 +17,7 @@ namespace UniversityManagementSystem.Models.Models
         public int Credit { get; set; }
         public string Description { get; set; }
         [Required]
-        public string Semester { get; set; }
+        public string SemesterId { get; set; }
         [Required]
         public int DepartmentId { get; set; }
         public int TeacherId { get; set; }
