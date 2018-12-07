@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="featured">
+    <!-- start slider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                @if (ViewBag.SMs != null)
+                {
+                    <h3 style="color:green"> @ViewBag.SMs</h3>
+                }
+                @if (ViewBag.SMg != null)
+                {
+                    <h3 style="color:green"> @ViewBag.SMg</h3>
+                }
+                <form method="POST" action="">
+                    <table class="table ">
+                        <tr>
+                            <td>Name</td>
+                            <td>
+                                <input type="text" id="Name" name="Name" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Code</td>
+                            <td>
+                                <input id="Code" name="Code" />
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Action</td>
+                            <td>
+                                <input type="submit" name="btn" value="Save" />
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </form>
+            </div>
+        </div>
+    </div>

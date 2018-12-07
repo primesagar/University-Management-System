@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model UniversityManagementSystem.Models.Models.Department
+
+<section id="featured">
+    <!-- start slider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Slider -->
+                <h3> Department List</h3>
+                <hr/>
+                <table class="table tab-content table-hover">
+                    <thead class="table-bordered text-info">
+                        <tr>
+                            <td>Department Name</td>
+                            <td>Department Code</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var deptList in Model.DepartmentList)
+                        {
+                            <tr class=" table-bordered">
+                                <td class="table-">@deptList.Name</td>
+                                <td>@deptList.Code</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <!-- end slider -->
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
