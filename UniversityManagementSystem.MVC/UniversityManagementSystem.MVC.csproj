@@ -112,8 +112,40 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\customScript.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="theme\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="theme\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="theme\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="theme\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="theme\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="theme\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="theme\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="theme\assets\bootstrap\js\npm.js" />
+    <Content Include="theme\assets\css\form-elements.css" />
+    <Content Include="theme\assets\css\style.css" />
+    <Content Include="theme\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="theme\assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="theme\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="theme\assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="theme\assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="theme\assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="theme\assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="theme\assets\ico\favicon.png" />
+    <Content Include="theme\assets\img\backgrounds\1%402x.jpg" />
+    <Content Include="theme\assets\img\backgrounds\1.jpg" />
+    <Content Include="theme\assets\img\logo%402x.png" />
+    <Content Include="theme\assets\img\logo.png" />
+    <Content Include="theme\assets\js\jquery-1.11.1.js" />
+    <Content Include="theme\assets\js\jquery-1.11.1.min.js" />
+    <Content Include="theme\assets\js\jquery.backstretch.js" />
+    <Content Include="theme\assets\js\jquery.backstretch.min.js" />
+    <Content Include="theme\assets\js\placeholder.js" />
+    <Content Include="theme\assets\js\retina-1.1.0.js" />
+    <Content Include="theme\assets\js\retina-1.1.0.min.js" />
+    <Content Include="theme\assets\js\scripts.js" />
     <Content Include="theme\contactform\contactform.js" />
     <Content Include="theme\contactform\Readme.txt" />
     <Content Include="theme\css\animate.css" />
@@ -186,6 +218,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CourseAssignTeacherViewModel.cs" />
+    <Compile Include="Models\ViewCourseStaticsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility.cs" />
   </ItemGroup>
@@ -210,8 +244,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Course\AddCourse.cshtml" />
     <Content Include="Views\Teacher\AddTeacher.cshtml" />
-    <Content Include="Views\Teacher\CourseAssign.cshtml" />
-    <Content Include="Views\Course\ViewCourseStatistics.cshtml" />
+    <Content Include="Views\Course\CourseAssignTeacher.cshtml" />
+    <Content Include="Views\Course\ViewCourseStatic.cshtml" />
     <Content Include="Views\Classroom\AllocateClassRoom.cshtml" />
     <Content Include="Views\Classroom\ViewClassRoomAndSchedule.cshtml" />
     <Content Include="Views\Student\EnrollToCourse.cshtml" />
@@ -222,6 +256,43 @@
     <Content Include="Views\Home\Posts.cshtml" />
     <Content Include="Views\Home\Demo.cshtml" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="theme\assets\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="theme\assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="theme\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="theme\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="theme\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="theme\assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="theme\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="theme\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="theme\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="theme\assets\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="theme\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="theme\assets\font-awesome\less\animated.less" />
+    <Content Include="theme\assets\font-awesome\less\bordered-pulled.less" />
+    <Content Include="theme\assets\font-awesome\less\core.less" />
+    <Content Include="theme\assets\font-awesome\less\fixed-width.less" />
+    <Content Include="theme\assets\font-awesome\less\font-awesome.less" />
+    <Content Include="theme\assets\font-awesome\less\icons.less" />
+    <Content Include="theme\assets\font-awesome\less\larger.less" />
+    <Content Include="theme\assets\font-awesome\less\list.less" />
+    <Content Include="theme\assets\font-awesome\less\mixins.less" />
+    <Content Include="theme\assets\font-awesome\less\path.less" />
+    <Content Include="theme\assets\font-awesome\less\rotated-flipped.less" />
+    <Content Include="theme\assets\font-awesome\less\stacked.less" />
+    <Content Include="theme\assets\font-awesome\less\variables.less" />
+    <Content Include="theme\assets\font-awesome\scss\font-awesome.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_animated.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_core.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_icons.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_larger.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_list.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_mixins.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_path.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_stacked.scss" />
+    <Content Include="theme\assets\font-awesome\scss\_variables.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -231,7 +302,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UniversityManagementSystem.Models\UniversityManagementSystem.Models.csproj">

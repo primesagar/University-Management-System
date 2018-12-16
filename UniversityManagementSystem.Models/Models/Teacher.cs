@@ -21,5 +21,6 @@ namespace UniversityManagementSystem.Models.Models
         public string DepartmentId { get; set; }
         [DefaultValue("false")]
         public bool DeletualStatus { get; set; }
+        
     }
 }

@@ -58,6 +58,22 @@
     <Compile Include="Migrations\201812061205294_Use SomeAnotation.Designer.cs">
       <DependentUpon>201812061205294_Use SomeAnotation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812080629425_Create Semester Model.cs" />
+    <Compile Include="Migrations\201812080629425_Create Semester Model.Designer.cs">
+      <DependentUpon>201812080629425_Create Semester Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812080911457_setup key.cs" />
+    <Compile Include="Migrations\201812080911457_setup key.Designer.cs">
+      <DependentUpon>201812080911457_setup key.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812091129435_Remove Fk from Course.cs" />
+    <Compile Include="Migrations\201812091129435_Remove Fk from Course.Designer.cs">
+      <DependentUpon>201812091129435_Remove Fk from Course.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812091239282_Designation Tabl Added.cs" />
+    <Compile Include="Migrations\201812091239282_Designation Tabl Added.Designer.cs">
+      <DependentUpon>201812091239282_Designation Tabl Added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +89,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812061205294_Use SomeAnotation.resx">
       <DependentUpon>201812061205294_Use SomeAnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812080629425_Create Semester Model.resx">
+      <DependentUpon>201812080629425_Create Semester Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812080911457_setup key.resx">
+      <DependentUpon>201812080911457_setup key.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812091129435_Remove Fk from Course.resx">
+      <DependentUpon>201812091129435_Remove Fk from Course.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812091239282_Designation Tabl Added.resx">
+      <DependentUpon>201812091239282_Designation Tabl Added.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

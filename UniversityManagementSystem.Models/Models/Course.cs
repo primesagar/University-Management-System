@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -23,5 +24,8 @@ namespace UniversityManagementSystem.Models.Models
         public int TeacherId { get; set; }
         [DefaultValue ("false")]
         public bool DeletualStatus { get; set; }
+        //public List<Student> Students { get; set; }
+        //[NotMapped]
+        //public List<SelectListItem> TakingAllDeprtment { get; set; }
     }
 }

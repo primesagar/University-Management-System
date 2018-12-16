@@ -1,101 +1,97 @@
-﻿
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 @{
     ViewBag.Title = "AddCourse";
 }
 
-<h2>Save Course</h2>
+@*<h2>Save Course</h2>*@
+
 <div align="center">
-    @if (@ViewBag.Message != null)
+    @if (@ViewBag.Em != null)
     {
-        <span class="alert alert-success" id="success-alert">@ViewBag.Message</span>
+        <span class="alert alert-danger" id="denger-alert">@ViewBag.Em</span>
+    }
+</div>
+<div align="center">
+    @if (@ViewBag.Sm != null)
+    {
+        <span class="alert alert-success" id="success-alert">@ViewBag.Sm</span>
     }
 </div>
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
 
+<!-- Top content -->
+<div class="top-content">
 
-    <div class="form-horizontal">
-        @*<h4></h4>*@
-        <hr />
-        @Html.ValidationSummary(true)
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
 
+                <div class="col-sm-5 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h2>Save Course</h2>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" action="" method="post" class="registration-form">
+                            <div class="form-group">
+                                <label class="sr-only" for="form-code">Code</label>
+                                <input type="text" name="Code" placeholder="Code..." class="form-first-name form-control" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-name">Name</label>
+                                <input type="text" name="Name" placeholder="Name..." class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-Credit">Credit</label>
+                                <input type="text" name="Credit" placeholder="Credit..." class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-Description">Description</label>
+                                <textarea name="Description" placeholder="Description..."
+                                          class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                            </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.CourseCode, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CourseCode, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CourseCode)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.CourseName, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CourseName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CourseName)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.CourseCredit, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CourseCredit, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CourseCredit)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.CourseDescription, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.CourseDescription, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.CourseDescription)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.DepartmentId, "Department", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("DepartmentId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.DepartmentId)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.SemesterId, "Semester", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("SemesterId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.SemesterId)
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-primary btn-sm" />
+                            <div class="form-group">
+
+                                @Html.DropDownList("DepartmentId", new SelectList(ViewBag.dl,"Id", "Name"))
+                                @*<select type="text" name="remaining_date" class="form-last-name form-control" id="form-last-name">
+                                    <option value="">Department</option>
+                                    <option value="seasonalfish">CSE</option>
+                                    <option value="assortedmushrooms">EEE</option>
+                                    <option value="assortedmushrooms">BBA</option>
+                                </select>*@
+                            </div>
+
+                            <div class="form-group">
+
+                            @Html.DropDownList("SemesterId", new SelectList(ViewBag.sl, "Id", "SemesterName"))
+
+                                @*<select type="text" name="remaining_date" class="form-last-name form-control" id="form-last-name">
+                                    <option value="">Semestir</option>
+                                    <option value="seasonalfish">1st</option>
+                                    <option value="assortedmushrooms">2nd</option>
+                                    <option value="assortedmushrooms">3rd</option>
+                                </select>*@
+                            </div>
+
+                            
+
+                            <button type="submit" class="btn">Ssave !</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
 </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-
-    <script>
-        $(document).ready(function () {
-
-            $("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
-                $("#success-alert").alert('close');
-            });
-
-            $("#submit").click(function () {
-
-                //$("#deptCode").val("");
-                //$("#deptName").val("");
-
-            });
-        });
-
-    </script>
-}
 
 

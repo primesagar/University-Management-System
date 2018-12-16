@@ -4,46 +4,59 @@
 }
 
 
-<section id="featured">
-    <!-- start slider -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                @if (ViewBag.SMs != null)
-                {
-                    <h3 style="color:green"> @ViewBag.SMs</h3>
-                }
-                @if (ViewBag.SMg != null)
-                {
-                    <h3 style="color:green"> @ViewBag.SMg</h3>
-                }
-                <form method="POST" action="">
-                    <table class="table ">
-                        <tr>
-                            <td>Name</td>
-                            <td>
-                                <input type="text" id="Name" name="Name" />
-                            </td>
-                        </tr>
+<div class="top-content">
 
-                        <tr>
-                            <td>Code</td>
-                            <td>
-                                <input id="Code" name="Code" />
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
 
-                            </td>
-                        </tr>
+                <div class="col-sm-5 form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h2>Add Department</h2>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                    @if (ViewBag.SMs != null)
+                    {
+                        <h3 style="color:green"> @ViewBag.SMs</h3>
+                    }
+                    @if (ViewBag.SMg != null)
+                    {
+                        <h3 style="color:green"> @ViewBag.SMg</h3>
+                    }
+                    <form method="POST" action="">
+                        <table class="table ">
+                            <tr>
+                                <td>Name</td>
+                                <td>
+                                    <input type="text" id="Name" name="Name" />
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>Action</td>
-                            <td>
-                                <input type="submit" name="btn" value="Save" />
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>Code</td>
+                                <td>
+                                    <input id="Code" name="Code" />
 
-                    </table>
+                                </td>
+                            </tr>
 
-                </form>
+                            <tr>
+                                <td>Action</td>
+                                <td>
+                                    <input type="submit" name="btn" value="Save" />
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+</div>
+

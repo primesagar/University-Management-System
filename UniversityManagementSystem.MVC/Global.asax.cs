@@ -11,6 +11,7 @@ namespace UniversityManagementSystem.MVC
     {
         protected void Application_Start()
         {
+            //Database.SetInitializer<>();
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }

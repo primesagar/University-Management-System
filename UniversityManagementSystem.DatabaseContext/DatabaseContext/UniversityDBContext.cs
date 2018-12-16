@@ -13,5 +13,7 @@ namespace UniversityManagementSystem.DatabaseContext
         public DbSet<Department> Departments { get; set; }
         public DbSet<EnrollStudent> EnrollStudents { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Semester> Semesters { get; set; }
+        public DbSet<Designation> Designations { get; set; }
     }
 }
