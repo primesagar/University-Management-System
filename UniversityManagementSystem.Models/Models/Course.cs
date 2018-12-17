@@ -17,11 +17,14 @@ namespace UniversityManagementSystem.Models.Models
         public string Name { get; set; }
         public int Credit { get; set; }
         public string Description { get; set; }
-        [Required]
-        public string SemesterId { get; set; }
-        [Required]
+
+        //[ForeignKey("Semester")]
+        public int? SemesterId { get; set; }
+        public Semester Semester { get; set; }
+       // [ForeignKey("Teacher")]
+        public int? TeacherId { get; set; }
+        public Teacher Teacher { get; set; }
         public int DepartmentId { get; set; }
-        public int TeacherId { get; set; }
         [DefaultValue ("false")]
         public bool DeletualStatus { get; set; }
         //public List<Student> Students { get; set; }

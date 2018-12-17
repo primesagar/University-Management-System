@@ -26,8 +26,18 @@ namespace UniversityManagementSystem.Repositories.Repositories
         }
         public List<Course> AllCourse()
         {
+            //not working
             return _universityDB.Courses.ToList();
+            //return _universityDB.Courses.ToList();
         }
+        public List<Course> AllCourseTS()
+        {
+            //not working
+            return _universityDB.Courses.Include("Teacher").Include( "Semester").ToList();
+            //return _universityDB.Courses.ToList();
+        }
+
+        // _context.Users.Include(p => p.Photos).FirstOrDefaultAsync(i => i.Id == id);
 
         //public List<Course> CourseStatists()
         //{
@@ -39,7 +49,7 @@ namespace UniversityManagementSystem.Repositories.Repositories
         //                  c.Name,
         //                  c.Code,
         //                  s.SemesterName
-                          
+
         //                }).ToList();
         //    return cs;
         //}

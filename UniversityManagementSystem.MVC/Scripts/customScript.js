@@ -94,4 +94,33 @@ $("#CId").change(function () {
     });
 });
 
+$("#DepartmentId").change(function () {
+    debugger
+    var departmentId = $(this).val();
+    
+    var params = { departmentId: departmentId }
+    $("#CATList").empty();
+    $.ajax({
+        url: "/Course/GetCourseByDepartment",
+        type: "POST",
+        contentType: "application/json; charset = utf-8",
+        data: JSON.stringify(params),
+       
+        success: function (resultData) {
+            $.each(resultData, function (ka, va) {
+                console.log(va.Name);
+            });
+            
+            //if (response != undefined && response != null && response != "") {
 
+            //    //$("#CATList").append("@foreach(var course in response.)");
+
+            //    $.each(response, function (key, value) {
+            //        $("#CATList").append("<td>  " + value.Code + " </td>");
+            //        $("#CATList").append("<td>  " + value.Name + " </td>");
+                    
+            //    });
+            //}
+        }
+    });
+});

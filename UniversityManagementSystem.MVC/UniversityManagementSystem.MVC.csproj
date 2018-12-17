@@ -219,6 +219,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CourseAssignTeacherViewModel.cs" />
+    <Compile Include="Models\StudentRegisterViewModel.cs" />
     <Compile Include="Models\ViewCourseStaticsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility.cs" />

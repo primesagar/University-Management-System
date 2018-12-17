@@ -60,7 +60,7 @@
 
                             <div class="form-group">
 
-                                @Html.DropDownList("DepartmentId", new SelectList(ViewBag.dl,"Id", "Name"))
+                                @Html.DropDownList("DepartmentId", new SelectList(ViewBag.dl,"Id", "Name"), new { @class = "form-control" })
                                 @*<select type="text" name="remaining_date" class="form-last-name form-control" id="form-last-name">
                                     <option value="">Department</option>
                                     <option value="seasonalfish">CSE</option>
@@ -71,7 +71,7 @@
 
                             <div class="form-group">
 
-                            @Html.DropDownList("SemesterId", new SelectList(ViewBag.sl, "Id", "SemesterName"))
+                            @Html.DropDownList("SemesterId", new SelectList(ViewBag.sl, "Id", "SemesterName" ), htmlAttributes: new { @class = "form-control" })
 
                                 @*<select type="text" name="remaining_date" class="form-last-name form-control" id="form-last-name">
                                     <option value="">Semestir</option>

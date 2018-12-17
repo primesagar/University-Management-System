@@ -27,20 +27,21 @@
                         <th>Assign To</th>
                         </tr>
                         </thead>
-                        <tbody class="table-row">
+                        <tbody class="table-row" id="CATList">
                             @foreach (var course in Model.CourseList)
                             {
                             <tr>
                                 <td>@course.Code</td>
                                 <td>@course.Name</td>
-                                <td>@course.SemesterId</td>
-                                @if (@course.TeacherId == 0)
+                                <td>@course.Semester.SemesterName</td>
+                                
+                                @if (@course.TeacherId == null)
                                 {
                                     <td> Not Assigned Yeat</td>
                                 }
                                 else
-                                { 
-                                    <td> @course.TeacherId</td>
+                                {
+                                    <td> @course.Teacher.Name</td>
                                 }
                             </tr>
                             }

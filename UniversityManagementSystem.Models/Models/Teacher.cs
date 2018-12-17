@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -21,6 +22,12 @@ namespace UniversityManagementSystem.Models.Models
         public string DepartmentId { get; set; }
         [DefaultValue("false")]
         public bool DeletualStatus { get; set; }
-        
+
+        public ICollection<Course> Course { get; set; }
+
+        public Teacher() {
+
+            Course = new Collection<Course>();
+        }
     }
 }

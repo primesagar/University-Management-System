@@ -42,6 +42,10 @@ namespace UniversityManagementSystem.Controllers
             { 
             if (ModelState.IsValid)
             {
+                    //if(course.TeacherId == 0)
+                    //{
+                    //    course.TeacherId = null;
+                    //}
                 bool IsSaved = _courseRepository.AddCourse(course);
                 if (IsSaved)
                 {
@@ -134,9 +138,21 @@ namespace UniversityManagementSystem.Controllers
             var model = new ViewCourseStaticsViewModel();
             model.DepartmentSelectListItems = _courseRepository.AllDepartment()
                 .Select(c=> new SelectListItem() { Value = c.Id.ToString(), Text = c.Name }).ToList();
-            model.CourseList = _courseRepository.AllCourse();
+            model.CourseList = _courseRepository.AllCourseTS();
             //var CourseList = _courseRepository.AllCourse();
             return View(model);
+        }
+
+       
+        public ActionResult GetCourseByDepartment(int departmentId)
+        {
+
+            //var course = _courseRepository.AllCourse().Where(c => c.SemesterId == departmentId).FirstOrDefault();
+            //return Json(course);
+            var model = new ViewCourseStaticsViewModel();
+            model.CourseList = _courseRepository.AllCourseTS().Where(c => c.DepartmentId == departmentId).ToList();
+            //var CAT = model.CourseList.Select(c => new { c.Code, c.Name, c.Semester.SemesterName }).ToList();
+            return Json(model.CourseList);
         }
     }
 

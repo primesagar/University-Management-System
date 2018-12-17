@@ -74,6 +74,14 @@
     <Compile Include="Migrations\201812091239282_Designation Tabl Added.Designer.cs">
       <DependentUpon>201812091239282_Designation Tabl Added.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812170553524_natoks.cs" />
+    <Compile Include="Migrations\201812170553524_natoks.Designer.cs">
+      <DependentUpon>201812170553524_natoks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812170631197_natoks2.cs" />
+    <Compile Include="Migrations\201812170631197_natoks2.Designer.cs">
+      <DependentUpon>201812170631197_natoks2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -101,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812091239282_Designation Tabl Added.resx">
       <DependentUpon>201812091239282_Designation Tabl Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812170553524_natoks.resx">
+      <DependentUpon>201812170553524_natoks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812170631197_natoks2.resx">
+      <DependentUpon>201812170631197_natoks2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
